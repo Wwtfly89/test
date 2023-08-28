@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demotest</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/home.css">
+  <script src="https://kit.fontawesome.com/a54d2cbf95.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#"><img src="image/3.gif" width="50" height="50" alt=""><b>好東東購物網</b></a>
+    <div class="input-group mb-3 form-inline my-2 my-lg-0">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">Disabled</a>
+        </li>
+      </ul>
+      <input type="text"  placeholder="請輸入關鍵字" aria-label="Recipient's username" aria-describedby="button-addon2">
+      <div class="input-group-append">
+        <button class="btn btn-outline-warning" type="button" id="button-addon2">Search</button>
+      </div>
+    </div>
+    <div class="dropdown ml-auto">
+      <button class="btn btn-cart btn-sm" id="dropdownMenuReference" data-bs-toggle="dropdown">
+        <i class="fas fa-shopping-cart fa-2x"></i>
+      </button>
+      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuReference" style="min-width:400px;">
+        <div class="px-4 py-3">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col"></th>
+                <th scope="col">商品名稱</th>
+                <th scope="col">數量</th>
+                <th scope="col">小計</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">
+                  <a data-toggle="modal" data-target="#removeModal" data-whatever="..." href="#">
+                  <i class="fas fa-trash-alt"></i>
+                  </a>
+                </th>
+                <td></td>
+                <td></td>
+                <td class="text-right"></td>
+              </tr>
+            </tbody>
+          </table>
+          <a href="#" class="btn btn-primary btn-block"> 結帳去</a>
+        </div>  
+      </div>
+    </div>
+  </nav>
+  
+  <div class="jumbotron jumbotron-fluid jumbo-bg d-flex align-items-end">
+    <div class="container">
+      <div class="bg-lighter py-3">
+        <p class="display-2"><b>買到剁手手</b></p>
+        <p class="display-4"><b>買啦哪次不買</b></p>  
+      </div>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="list-group sticky-top" id="myList" >
+          <a href="#model" class="list-group-item list-group-item-action active" data-toggle="list" role="tab">
+            <i class="fas fa-shopping-cart mr-1"></i>模型專區</a>
+          <a  href="#gift" class="list-group-item list-group-item-action"  data-toggle="list" role="tab">
+            <i class="fas fa-gift mr-1"></i>禮品區</a>
+          <a href="#vedio" class="list-group-item list-group-item-action"  data-toggle="list" role="tab">
+            <i class="fas fa-tv mr-1"></i>影音專區</a>
+            <!--
+          <a href="#pet" class="list-group-item list-group-item-action"  data-toggle="list"  role="tab">
+            <i class="fas fa-paw mr-1"></i>寵物專用</a>
+          <a href="#furniture" class="list-group-item list-group-item-action" data-toggle="list"  role="tab">
+            <i class="fas fa-bed mr-1"></i>居家用品</a> -->
+        </div>
+      </div>
+      <div class="col-md-8">
+        <!-- <div class="row">
+            <div class="col-md-9">
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="請輸入關鍵字" aria-label="Recipient's username" aria-describedby="button-addon2">
+                <div class="input-group-append">
+                  <button class="btn btn-outline-warning" type="button" id="button-addon2">Search</button>
+                </div>
+                </div>  
+            </div>
+        </div>
+      -->
+  <div class="tab-content">
+    <div class="tab-pane active" id="model" role="tabpanel">
+      <div class="row">
+            <div class="col-lg-4 col-md-12 mt-3">
+              <div class="card h-100 border-0 box-shadow">
+                <img src="image/nana.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  
+                </div>
+                <div class="card-footer card-footer-bg border-top-0 text-center">
+                  <div class="btn-group mr-2" role="group" aria-label="First group">
+                    <button type="button" class="btn btn-outline-secondary">SM</button>
+                    <button type="button" class="btn btn-outline-secondary">M</button>
+                    <button type="button" class="btn btn-outline-secondary">XL</button>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>  
+            <div class="col-lg-4 col-md-12 mt-3">
+              <div class="card h-100 border-0 box-shadow">
+                <img src="image/pop.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  
+                </div>
+                <div class="card-footer card-footer-bg border-top-0 text-center">
+                  <div class="btn-group mr-2" role="group" aria-label="First group">
+                    <button type="button" class="btn btn-outline-secondary">SM</button>
+                    <button type="button" class="btn btn-outline-secondary">M</button>
+                    <button type="button" class="btn btn-outline-secondary">XL</button>
+                    
+                  </div>
+                </div>
+              </div>
+            </div> 
+            <div class="col-lg-4 col-md-12 mt-3">
+              <div class="card border-0 box-shadow">
+                <img src="image/pulu.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+
+                </div>
+                <div class="card-footer card-footer-bg border-top-0 text-center">
+                  <div class="btn-group mr-2" role="group" aria-label="First group">
+                    <button type="button" class="btn btn-outline-secondary">SM</button>
+                    <button type="button" class="btn btn-outline-secondary">M</button>
+                    <button type="button" class="btn btn-outline-secondary">XL</button>
+                    
+                  </div>
+                </div>
+              </div>
+            </div> 
+            <div class="col-lg-4 col-md-12 mt-3">
+              <div class="card border-0 box-shadow">
+                <img src="image/pulu.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+
+                </div>
+                <div class="card-footer card-footer-bg border-top-0 text-center">
+                  <div class="btn-group mr-2" role="group" aria-label="First group">
+                    <button type="button" class="btn btn-outline-secondary">SM</button>
+                    <button type="button" class="btn btn-outline-secondary">M</button>
+                    <button type="button" class="btn btn-outline-secondary">XL</button>
+                    
+                  </div>
+                </div>
+              </div>
+            </div> 
+            <div class="col-lg-4 col-md-12 mt-3">
+              <div class="card border-0 box-shadow">
+                <img src="image/pulu.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+
+                </div>
+                <div class="card-footer card-footer-bg border-top-0 text-center">
+                  <div class="btn-group mr-2" role="group" aria-label="First group">
+                    <button type="button" class="btn btn-outline-secondary">SM</button>
+                    <button type="button" class="btn btn-outline-secondary">M</button>
+                    <button type="button" class="btn btn-outline-secondary">XL</button>
+                    
+                  </div>
+                </div>
+              </div>
+            </div> 
+            <div class="col-lg-4 col-md-12 mt-3">
+              <div class="card border-0 box-shadow">
+                <img src="image/pulu.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+
+                </div>
+                <div class="card-footer card-footer-bg border-top-0 text-center">
+                  <div class="btn-group mr-2" role="group" aria-label="First group">
+                    <button type="button" class="btn btn-outline-secondary">SM</button>
+                    <button type="button" class="btn btn-outline-secondary">M</button>
+                    <button type="button" class="btn btn-outline-secondary">XL</button>
+                    
+                  </div>
+                </div>
+              </div>
+            </div> 
+            <div class="col-lg-4 col-md-12 mt-3">
+              <div class="card border-0 box-shadow">
+                <img src="image/pulu.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+
+                </div>
+                <div class="card-footer card-footer-bg border-top-0 text-center">
+                  <div class="btn-group mr-2" role="group" aria-label="First group">
+                    <button type="button" class="btn btn-outline-secondary">SM</button>
+                    <button type="button" class="btn btn-outline-secondary">M</button>
+                    <button type="button" class="btn btn-outline-secondary">XL</button>
+                    
+                  </div>
+                </div>
+              </div>
+            </div> 
+            <div class="col-lg-4 col-md-12 mt-3">
+              <div class="card border-0 box-shadow">
+                <img src="image/pulu.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+
+                </div>
+                <div class="card-footer card-footer-bg border-top-0 text-center">
+                  <div class="btn-group mr-2" role="group" aria-label="First group">
+                    <button type="button" class="btn btn-outline-secondary">SM</button>
+                    <button type="button" class="btn btn-outline-secondary">M</button>
+                    <button type="button" class="btn btn-outline-secondary">XL</button>
+                    
+                  </div>
+                </div>
+              </div>
+            </div> 
+            <div class="col-lg-4 col-md-12 mt-3">
+              <div class="card border-0 box-shadow">
+                <img src="image/pulu.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+
+                </div>
+                <div class="card-footer card-footer-bg border-top-0 text-center">
+                  <div class="btn-group mr-2" role="group" aria-label="First group">
+                    <button type="button" class="btn btn-outline-secondary">SM</button>
+                    <button type="button" class="btn btn-outline-secondary">M</button>
+                    <button type="button" class="btn btn-outline-secondary">XL</button>
+                    
+                  </div>
+                </div>
+              </div>
+            </div> 
+            <div class="col-lg-4 col-md-12 mt-3">
+              <div class="card border-0 box-shadow">
+                <img src="image/pulu.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+
+                </div>
+                <div class="card-footer card-footer-bg border-top-0 text-center">
+                  <div class="btn-group mr-2" role="group" aria-label="First group">
+                    <button type="button" class="btn btn-outline-secondary">SM</button>
+                    <button type="button" class="btn btn-outline-secondary">M</button>
+                    <button type="button" class="btn btn-outline-secondary">XL</button>
+                    
+                  </div>
+                </div>
+              </div>
+            </div> 
+            <div class="col-lg-4 col-md-12 mt-3">
+              <div class="card border-0 box-shadow">
+                <img src="image/pulu.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+
+                </div>
+                <div class="card-footer card-footer-bg border-top-0 text-center">
+                  <div class="btn-group mr-2" role="group" aria-label="First group">
+                    <button type="button" class="btn btn-outline-secondary">SM</button>
+                    <button type="button" class="btn btn-outline-secondary">M</button>
+                    <button type="button" class="btn btn-outline-secondary">XL</button>
+                    
+                  </div>
+                </div>
+              </div>
+            </div> 
+            <div class="col-lg-4 col-md-12 mt-3">
+              <div class="card border-0 box-shadow">
+                <img src="image/pulu.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+
+                </div>
+                <div class="card-footer card-footer-bg border-top-0 text-center">
+                  <div class="btn-group mr-2" role="group" aria-label="First group">
+                    <button type="button" class="btn btn-outline-secondary">SM</button>
+                    <button type="button" class="btn btn-outline-secondary">M</button>
+                    <button type="button" class="btn btn-outline-secondary">XL</button>
+                    
+                  </div>
+                </div>
+              </div>
+            </div> 
+            <div class="col-lg-4 col-md-12 mt-3">
+              <div class="card border-0 box-shadow">
+                <img src="image/pulu.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+
+                </div>
+                <div class="card-footer card-footer-bg border-top-0 text-center">
+                  <div class="btn-group mr-2" role="group" aria-label="First group">
+                    <button type="button" class="btn btn-outline-secondary">SM</button>
+                    <button type="button" class="btn btn-outline-secondary">M</button>
+                    <button type="button" class="btn btn-outline-secondary">XL</button>
+                    
+                  </div>
+                </div>
+              </div>
+            </div> 
+             
+          </div> 
+    
+    </div>
+    <div class="tab-pane" id="gift" role="tabpanel">
+      <div class="row">
+        <div class="col-lg-4 col-md-12 mt-3">
+          <div class="card border-0 box-shadow">
+                <img src="image/love.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  
+                </div>
+                <div class="card-footer card-footer-bg border-top-0 text-center">
+                  <div class="btn-group mr-2" role="group" aria-label="First group">
+                    <button type="button" class="btn btn-outline-secondary">SM</button>
+                    <button type="button" class="btn btn-outline-secondary disabled" tabindex=-1>M</button>
+                    <button type="button" class="btn btn-outline-secondary">XL</button>
+                    
+                  </div>
+                </div>
+              </div>  
+        </div>
+        <div class="col-lg-4 col-md-12 mt-3">
+          <div class="card border-0 box-shadow">
+                <img src="image/ma.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  
+                </div>
+                <div class="card-footer card-footer-bg border-top-0 text-center">
+                  <div class="btn-group mr-2" role="group" aria-label="First group">
+                    <button type="button" class="btn btn-outline-secondary">SM</button>
+                    <button type="button" class="btn btn-outline-secondary disabled" tabindex=-1>M</button>
+                    <button type="button" class="btn btn-outline-secondary">XL</button>
+                    
+                  </div>
+                </div>
+              </div>  
+        </div>
+        <div class="col-lg-4 col-md-12 mt-3">
+          <div class="card border-0 box-shadow">
+                <img src="image/1.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  
+                </div>
+                <div class="card-footer card-footer-bg border-top-0 text-center">
+                  <div class="btn-group mr-2" role="group" aria-label="First group">
+                    <button type="button" class="btn btn-outline-secondary">SM</button>
+                    <button type="button" class="btn btn-outline-secondary disabled" tabindex=-1>M</button>
+                    <button type="button" class="btn btn-outline-secondary">XL</button>
+                    
+                  </div>
+                </div>
+              </div>
+            </div> 
+             
+          </div> 
+    
+    </div>
+    <div class="tab-pane" id="vedio" role="tabpanel">
+      <div class="row">
+        <div class="col-lg-4 col-md-12 mt-3">
+          <div class="card border-0 box-shadow">
+                <img src="image/ost.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  
+                </div>
+                <div class="card-footer card-footer-bg border-top-0 text-center">
+                  <div class="btn-group mr-2" role="group" aria-label="First group">
+                    <button type="button" class="btn btn-outline-secondary">SM</button>
+                    <button type="button" class="btn btn-outline-secondary disabled" tabindex=-1>M</button>
+                    <button type="button" class="btn btn-outline-secondary">XL</button>
+                    
+                  </div>
+                </div>
+              </div>
+            </div> 
+             
+          </div> 
+    
+    </div>
+    <!--
+    <div class="tab-pane" id="pet" role="tabpanel">
+      <div class="row">
+        <div class="col-lg-4 col-md-12">
+          <div class="card border-0 box-shadow">
+                <img src="https://images.unsplash.com/photo-1507146426996-ef05306b995a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  
+                </div>
+                <div class="card-footer card-footer-bg border-top-0 text-center">
+                  <div class="btn-group mr-2" role="group" aria-label="First group">
+                    <button type="button" class="btn btn-outline-secondary">SM</button>
+                    <button type="button" class="btn btn-outline-secondary disabled" tabindex=-1>M</button>
+                    <button type="button" class="btn btn-outline-secondary">XL</button>
+                    
+                  </div>
+                </div>
+              </div>   
+        </div>
+      </div>
+    </div> 
+    <div class="tab-pane" id="furniture" role="tabpanel">
+      <div class="row">
+        <div class="col-lg-4 col-md-12">
+          <div class="card border-0 box-shadow">
+                <img src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  
+                </div>
+                <div class="card-footer card-footer-bg border-top-0 text-center">
+                  <div class="btn-group mr-2" role="group" aria-label="First group">
+                    <button type="button" class="btn btn-outline-secondary">SM</button>
+                    <button type="button" class="btn btn-outline-secondary disabled" tabindex=-1>M</button>
+                    <button type="button" class="btn btn-outline-secondary">XL</button>
+                    
+                  </div>
+                </div>
+              </div>   
+        </div>
+        <div class="col-lg-4 col-md-12">
+          <div class="card border-0 box-shadow">
+                <img src="https://images.unsplash.com/photo-1533090481720-856c6e3c1fdc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  
+                </div>
+                <div class="card-footer card-footer-bg border-top-0 text-center">
+                  <div class="btn-group mr-2" role="group" aria-label="First group">
+                    <button type="button" class="btn btn-outline-secondary">SM</button>
+                    <button type="button" class="btn btn-outline-secondary disabled" tabindex=-1>M</button>
+                    <button type="button" class="btn btn-outline-secondary">XL</button>
+                    
+                  </div>
+                </div>
+              </div>   
+        </div>
+      </div>
+    </div>-->
+  </div>      
+        
+          
+      </div>
+    </div>
+  </div>
+  <!--
+  <section>
+    <div class="container mt-5">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb bg-transparent pl-0">
+          <li class="breadcrumb-item"><a href="#">首頁</a></li>
+          <li class="breadcrumb-item"><a href="#">金牌專賣店</a></li>
+          <li class="breadcrumb-item active" aria-current="page">金牌西裝</li>
+        </ol>
+      </nav>
+      
+      <div class="row">
+        
+        <div class="col-md-4">
+          <div class="sticky-top sticky-top-dis">
+            <h1 class="h2">金牌西裝</h1>
+          <div class="d-flex align-items-end">
+            <del class="text-muted">$售價 1299</del>
+            <h3 class="ml-auto mb-0 text-danger">網路價 NT$520</h3>  
+          </div>
+         <hr>尺寸:
+          <div class="btn-group btn-group-toggle btn-group-sm ml-1" data-toggle="buttons">
+            <label class="btn btn-outline-secondary active">
+              <input type="radio" name="options" id="option1" checked> SM
+            </label>
+            <label class="btn btn-outline-secondary disabled">
+              <input type="radio" name="options" id="option2" disabled> M
+            </label>
+            <label class="btn btn-outline-secondary">
+              <input type="radio" name="options" id="option3"> XL
+            </label>
+          </div>
+          
+            <div class="input-group">
+              <select class="form-control mr-1">
+                <option value="1">1件</option>
+                <option value="2">2件</option>
+                <option value="3">3件</option>
+              </select>
+              <a href="#" class="btn btn-primary">加入購物車</a>
+            </div>  
+          </div>
+          
+        
+        </div>
+        <div class="col-md-8" style="position:relative;">
+          <h2>帥氣的西裝無人能敵</h2>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus soluta quam eveniet aut cum molestiae temporibus itaque architecto totam beatae?</p>
+          <h3 class="text-center">合身剪裁</h3>
+          <img src="https://images.unsplash.com/photo-1472417583565-62e7bdeda490?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60" class="img-fluid w-100" alt="Responsive image">
+          <h3 class="text-center mt-4">簡單就好</h3>
+          <img src="https://images.unsplash.com/photo-1567849859756-79bf6a9d62f1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60" class="img-fluid w-100" alt="Responsive image">
+          <h3 class="text-center mt-4">不佔空間</h3>
+          <img src="https://images.unsplash.com/photo-1547822281-5c9d3ab15297?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60" class="img-fluid w-100" alt="Responsive image">
+          <div class="bg-light mt-2">
+            <h3>購買說明</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, itaque eligendi officiis illum, molestias quam sequi amet molestiae repellendus nostrum officia earum non, et quo nemo explicabo fugit cum possimus?</p>
+          </div>
+        </div>
+    </div>
+      </div>
+  </section>
+  
+  <hr>  
+  
+  <section>
+    <div class="container mt-5">
+      <h2 class="text-muted text-center mb-4 h1">六角血拚 結帳區</h2>
+      <div class="form-row">
+        <div class="col-sm-4">
+          <div class="alert alert-primary alert-rounded" role="alert">
+            1.輸入訂單資料 
+          </div>  
+        </div>
+        <div class="col-sm-4">
+          <div class="alert alert-secondary alert-rounded" role="alert">
+            2.金流付款 
+          </div> 
+        </div>
+        <div class="col-sm-4">
+          <div class="alert alert-secondary alert-rounded" role="alert">
+            3.完成 
+          </div> 
+        </div>
+      </div>
+      <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="card">
+          <div class="card-header d-flex align-items-end" id="headingOne">
+              <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                顯示購物車細節 
+              </button>
+              <p class="h4">$520</p>
+          </div>
+  
+          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col" width="50"></th>
+                    <th scope="col" width="50">
+                     
+                    </th>
+                    <th scope="col" width="200">商品名稱</th>
+                    <th scope="col" width="100">數量</th>
+                    <th scope="col" width="50">小計</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">
+                      <a data-toggle="modal" data-target="#removeModal" data-whatever="金牌西裝" href="#">
+                      <i class="fas fa-trash-alt"></i>
+                      </a>
+                    </th>
+                    <td>
+                      <div class="card border-secondary">
+                        <div class="card-body card-bg" style="background-image:url(https://images.unsplash.com/photo-1426523038054-a260f3ef5bc9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60);">
+                          
+                        </div>
+                      </div>
+                      
+                    </td>
+                    <td>金牌西裝</td>
+                    <td>1件</td>
+                    <td class="text-right">$520</td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <td colspan="4" class="text-right">運費 </td>
+                    <td class="text-right">$60</td>
+                  </tr>  
+                  <tr>
+                    <td colspan="4" class="text-right">合計 </td>
+                    <td class="text-right">$580</td>
+                  </tr>  
+                </tfoot>
+              </table>
+          </div>
+        </div>  
+        <div class="card mt-3">
+            <div class="card-header">
+              訂購人資訊
+            </div>
+            <div class="card-body">
+              <form  class="needs-validation" novalidate>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="inputname">姓名</label>
+                    <input type="name" class="form-control" id="inputname" placeholder="請輸入姓名" required>
+                    <div class="invalid-feedback">
+                      請輸入姓名
+                    </div>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="inputEmail4">Email</label>
+                    <input type="email" class="form-control" id="inputEmail4" placeholder="Email" required>
+                    <div class="invalid-feedback">
+                      請輸入Email
+                    </div>
+                  </div>
+                  
+                </div>
+                
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="inputNation">國家</label>
+                    <input type="text" class="form-control" id="inputNation" placeholder="台灣" required>
+                    <div class="invalid-feedback">
+                      請輸入國家
+                    </div>
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="inputCity">城市</label>
+                    <select id="inputCity" class="form-control">
+                      <option selected>台北市</option>
+                      <option>台中市</option>
+                    </select>
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label for="inputZip">郵遞區號</label>
+                    <input type="text" class="form-control" id="inputZip" required>
+                    <div class="invalid-feedback">
+                      請輸入郵遞區號
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputAddress">地址</label>
+                  <input type="text" class="form-control" id="inputAddress" placeholder="忠孝東路的左邊" required>
+                  <div class="invalid-feedback">
+                    請輸入地址
+                  </div>
+                </div>
+                <div class="d-flex justify-content-end">
+                  <button type="button" class="btn btn-secondary mr-1">繼續選購</button>
+                  <button class="btn btn-primary" type="submit">確認付帳</button>   
+                </div>
+                
+               
+              </form>
+            </div>
+          </div>
+      </div>
+    </div>  
+    </div>
+    
+    </section>
+  
+    <hr>
+    <section>
+        <h2 class="mt-5 mb-4 text-center text-muted h1">六角血拚 結帳完成</h2>
+        <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-8">
+            <div class="alert alert-success text-center alert-rounded" role="alert">
+              完成
+            </div>  
+            <div class="card">
+              <div class="card-header text-center">購買資訊</div>
+              <div class="card-body">
+                <table class="table">
+                    <thead>
+                      <tr>
+  
+                        <th scope="col" width="50"></th>
+  
+                        <th scope="col" width="200">商品名稱</th>
+                        <th scope="col" width="100">數量</th>
+                        <th scope="col" width="50">小計</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+  
+                        <td>
+                          <div class="card border-secondary">
+                            <div class="card-body card-bg" style="background-image:url(https://images.unsplash.com/photo-1426523038054-a260f3ef5bc9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60);">
+  
+                            </div>
+                          </div>
+                        </td>
+                        <td>金牌西裝</td>
+                        <td>1件</td>
+                        <td class="text-right">$520</td>
+                      </tr>
+                    </tbody>
+                    <tfoot>
+                      <tr>
+                        <td colspan="3" class="text-right">運費 </td>
+                        <td class="text-right font-weight-bold">$60</td>
+                      </tr>  
+                      <tr>
+                        <td colspan="3" class="text-right">合計 </td>
+                        <td class="text-right font-weight-bold">$580</td>
+                      </tr>  
+                    </tfoot>
+                  </table>  
+              </div>
+          </div>
+            <div class="card mt-3">
+              <div class="card-header text-center">填寫人資訊</div>
+              <div class="card-body">
+                <table class="table">
+                    
+                    <tbody>
+                      <tr>
+                        <td class="font-weight-bold">Email</td>
+                        <td>ag3456***@gmail.com</td>
+                      </tr>
+                      <tr>
+                        <td class="font-weight-bold">姓名 </td>
+                        <td>咬 * 手手</td>
+                      </tr>
+                      <tr>
+                        <td class="font-weight-bold">電話</td>
+                        <td>987654***</td>
+                      </tr>
+                      <tr>
+                        <td class="font-weight-bold">地址 </td>
+                        <td>重慶南路一段122號</td>
+                      </tr>
+                    </tbody>
+  
+                  </table>  
+              </div>
+            </div>
+          </div>
+        </div>  
+        </div>
+  
+    </section>
+  
+    <footer class="bg-light mt-4 text-center p-4">
+      <h6 class="text-muted">© Copright 2020 六角血拼賣賣
+        <a href="#" title="twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" title="instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" title="facebool"><i class="fab fa-facebook-square"></i></a>
+      </h6>
+      <p class="text-muted">Made with Bootstrap4</p>
+    </footer>
+  <!--Modal-->
+  <div class="modal fade" data-backdrop="static" id="removeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header bg-danger text-white">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">否</button>
+          <button type="button" class="btn btn-outline-danger px-5">是</button>
+        </div>
+      </div>
+    </div>
+  </div>-->
+  <a href="#" class="js-back-to-top">
+    <i class="fas fa-4x fa-caret-square-up"></i>
+  </a>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+<script src="js/home.js"></script>
+</body>
+</html>
